@@ -23,7 +23,7 @@ let point: { x: number; y: number } = { x: 1, y: 2 };
 class Car {}
 let car: Car = new Car();
 
-// Function
+// Modifiying Var As Function
 const logNumber: (i: number) => void = (i: number) => {
     console.log(i);
 };
