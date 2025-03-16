@@ -1,6 +1,8 @@
-interface TODO {
-    name: string;
-}
+import { Company } from "./Company";
+import { User } from "./User";
 
-const todo: TODO = { name: "Do thing" };
-console.log(todo);
+const user = new User()
+console.log(user);
+const company = new Company()
+console.log(company);
+console.log(google);
