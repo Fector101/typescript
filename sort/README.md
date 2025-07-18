@@ -1,6 +1,7 @@
 # Config
 
 1. Part 1
+In package.json **main folder**
 Create `build` and `src` then
 Run tsc --init  to create config file then change "rootDir": "./" to "rootDir": "./sort/src" and "outDir": "./" to  "outDir": "./sort/build"  
 Then run `tsc` to compile or `tsc -w` to wacth for changes
@@ -15,6 +16,19 @@ Run `npm install nodemon concurrently` insert the below code
     "start": "concurrently npm:start:*", // When you run `npm start`, `npm:start:* will look for all scripts that start with `start:` and run them concurrently
   },
 ```
+3. Part 3 -- Last Part
+Add `"include": ["sort/src/**/*"]` to `tsconfig.json` to stop compling of ts files in other folders
+
+```json
+{
+  "include": ["sort/src/**/*"],
+  "compilerOptions": {
+  }
+}
+```
+
+4. Part 3 -- Last Part
+Comment out unused imports to avoid errors
 
 # Strings are immutable
 ```js
