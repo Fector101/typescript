@@ -1,10 +1,29 @@
+// This way Works but it's repeatative and kind of long
+// class Vehicle {
+//     color: string;
+//     private age: number;
+//     constructor(color: string){
+//         this.color = color
+//         this.age = 21
+//     }
+// }
+// Used this instead (shortcut) 
+// class Vehicle {
+//     constructor(public color: string){}
+// }
+
+
+
 class Vehicle {
+
+    // fields or attributes
+    // constructor is like init for python, it runs everytime a new instance is created
     constructor(
         public color: string,
-        protected weigh: number,
-        private owner: string
+        protected weigh: number, // Can be accessed by child classes
+        private owner: string // Can only be accessed by methods in current class
     ) {}
-    drive(): void {
+    public drive(): void {
         console.log("driving....");
     }
     public honk(): void {
@@ -27,10 +46,11 @@ class Vehicle {
 // Type of Vehicle
 class Car1 extends Vehicle {
     constructor(public wheels: number, color: string) {
-        //No public added the `color` parament because don't want to create a new attr `color`, i.e it belongs to `Vehicle`
-        super(color, 333, "Fabian");
+        //No public added to the `color` parament because don't want to create a new attr `color`, i.e it belongs to `Vehicle`
+        super(color, 333, "Fabian"); // When using `extends` and you want to use `constructor` you must call `super` 
     }
     drive(): void {
+        // We can't change the modifier when overriding a method
         // Override Super method drive
         console.log("vroom");
     }
