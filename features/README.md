@@ -1,7 +1,7 @@
 # Stuff
 
 ## General
-
+`|` <--- **Union** or **OR** operator
 
 ## Classes
 
@@ -33,7 +33,7 @@ class Vehicle {
 ```
 
 2. You can use classes to create instance and also to refer as type
-`function (mappable: Company|User){}`
+`function (mappable: Company | User){}`
 if filter out attribute thing only commons remain
 
 3.The Below code means User must have all attributes of Mappable
