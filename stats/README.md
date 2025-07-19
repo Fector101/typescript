@@ -27,3 +27,22 @@ row[5] as MatchResult
 ```
 
 4. `tuple` can arrange order of types in an array
+
+```ts
+type MatchData = [Date, string, string, number, number, MatchResult, string]
+const data: MatchData = [ 2018-10-28T07:00:00.000Z, 'Man United', 'Everton', 2, 1,'H', 'J Moss']
+```
+
+5. `Generics` Passing in `Types` as `Arguments`, then anywhere it's reference it'll have the passed in `type`,
+
+
+```ts
+class HoldAnything<TypeOfData>{ // Developers usually used <T> to refer as type of data 
+    data: TypeOfData;
+}
+const holdNumber = new HoldAnything<number>();
+holdNumber.data = 123
+
+const holdNumber = new HoldAnything<string>();
+holdNumber.data = 123
+```
