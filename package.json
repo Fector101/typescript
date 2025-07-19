@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start:build": "tsc -w",
-    "start:run": "nodemon sort/build/index.js",
+    "start:run": "nodemon stats/build/index.js",
     "start": "concurrently npm:start:*"
   },
   "keywords": [],
@@ -14,6 +14,7 @@
   "dependencies": {
     "@faker-js/faker": "7.6.0",
     "@types/google.maps": "^3.58.1",
+    "@types/node": "^24.0.15",
     "axios": "^1.8.3",
     "concurrently": "^9.2.0",
     "nodemon": "^3.1.10"
