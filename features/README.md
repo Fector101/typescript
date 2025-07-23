@@ -66,3 +66,41 @@ export class User implements Mappable{
 }
 
 ```
+
+3. Even if not needed Always Add Type Annonation For Generics and their Returns to Catch Errors
+
+```ts
+
+function printAnything<Tea>(arr: Tea[]): void {
+    for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+    }
+    return 0 // caught error
+}
+
+printAnything<string>([1,2,3,4]) // caught error
+```
+
+4. Genric Constraints: Limits types to pass in as args
+
+```ts
+class Car {
+    print() {console.log('I am a Car');}
+}
+
+class House {
+    print() {console.log('I am a house'); }
+}
+
+interface Printable {
+    print(): void;
+}
+
+function printHousesOrCars<T extends Printable>(arr: T[]): void {
+    for (let i = 0; i < arr.length; i++) {
+        arr[i].print()
+    }
+}
+printHousesOrCars<House>([new House(), new House()])
+printHousesOrCars<Car>([new Car(), new Car()])
+```
